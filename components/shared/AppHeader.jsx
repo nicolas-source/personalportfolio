@@ -1,12 +1,8 @@
 import {useState} from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import {motion} from 'framer-motion';
 import {FiSun, FiMoon, FiX, FiMenu} from 'react-icons/fi';
 import HireMeModal from '../HireMeModal';
-import logoLight from '../../public/images/logo-light.svg';
-import logoDark from '../../public/images/logo-dark.svg';
-import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 
 function AppHeader() {
     const [showMenu, setShowMenu] = useState(false);

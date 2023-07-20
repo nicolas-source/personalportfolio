@@ -16,7 +16,8 @@ const ProjectSingle = (props) => {
             }}
         >
             <Link
-                href="/projects/[id]"
+                // href="/projects/[id]"
+                href="/"
                 as={'/projects/' + props.shortName}
                 aria-label="Single Project"
                 passHref>
