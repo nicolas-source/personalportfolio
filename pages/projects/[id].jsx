@@ -7,8 +7,6 @@ function ProjectSingle(props) {
 	return (
 
 		<div className="container mx-auto">
-			{console.log("I got here")}
-			{console.log(props)}
 
 			<PagesMetaHead title={props.project.shortName} />
 
@@ -175,8 +173,6 @@ function ProjectSingle(props) {
 
 export async function getServerSideProps({ query }) {
 	const { id } = query;
-	console.log("query")
-	console.log(query)
 	return {
 
 		props: {

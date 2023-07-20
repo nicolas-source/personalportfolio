@@ -21,7 +21,6 @@ const ProjectSingle = (props) => {
 				aria-label="Single Project"
 				passHref
 			>
-				{console.log(props)}
 
 				{/*<div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">*/}
 				{/*	<div>*/}
