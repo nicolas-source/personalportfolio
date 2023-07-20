@@ -4,7 +4,7 @@ import FeatImage01 from '/public/images/UBC.jpg'
 
 export default function EducationList() {
     return (
-        <section>
+        <section id="education">
             <div className="bg-white py-12">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="py-6 border-t border-slate-400"></div>

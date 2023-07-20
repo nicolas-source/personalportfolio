@@ -6,7 +6,7 @@ import FeatImage03 from '/public/images/UBCDC.png'
 
 export default function ExperienceList() {
     return (
-        <section>
+        <section id="experience">
             <div className="bg-white py-16">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="py-6 border-t border-gray-400"></div>
