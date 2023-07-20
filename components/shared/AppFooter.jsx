@@ -1,30 +1,69 @@
-import React from 'react'
-import Link from 'next/link'
+import {
+	FiGithub,
+	FiTwitter,
+	FiLinkedin,
+	FiGlobe,
+	FiYoutube,
+} from 'react-icons/fi';
+import AppFooterCopyright from './AppFooterCopyright';
 
-export default function Footer() {
+const socialLinks = [
+	{
+		id: 1,
+		icon: <FiGlobe />,
+		url: 'https://www.stoman.me/',
+	},
+	{
+		id: 2,
+		icon: <FiGithub />,
+		url: 'https://github.com/realstoman',
+	},
+	{
+		id: 3,
+		icon: <FiTwitter />,
+		url: 'https://twitter.com/realstoman',
+	},
+	{
+		id: 4,
+		icon: <FiLinkedin />,
+		url: 'https://www.linkedin.com/in/realstoman',
+	},
+	{
+		id: 5,
+		icon: <FiYoutube />,
+		url: 'https://www.youtube.com/c/realstoman',
+	},
+];
+
+function AppFooter() {
 	return (
-		<footer>
-			<div className="py-12 md:py-16">
-				<div className="max-w-6xl mx-auto px-4 sm:px-6">
-
-					<div className="md:flex md:items-center md:justify-between">
-
-						{/* Social links */}
-						<ul className="flex mb-4 md:order-1 md:ml-4 md:mb-0">
-							<li className="ml-4">
-								<Link href="/" className="flex justify-center items-center text-sky-800 bg-gray-100 hover:text-sky-800 hover:bg-gray-800 rounded-full transition duration-150 ease-in-out" aria-label="Linkedin">
-									<svg className="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-										<path d="M23.3 8H8.7c-.4 0-.7.3-.7.7v14.7c0 .3.3.6.7.6h14.7c.4 0 .7-.3.7-.7V8.7c-.1-.4-.4-.7-.8-.7zM12.7 21.6h-2.3V14h2.4v7.6h-.1zM11.6 13c-.8 0-1.4-.7-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.4.6 1.4 1.4-.1.7-.7 1.4-1.4 1.4zm10 8.6h-2.4v-3.7c0-.9 0-2-1.2-2s-1.4 1-1.4 2v3.8h-2.4V14h2.3v1c.3-.6 1.1-1.2 2.2-1.2 2.4 0 2.8 1.6 2.8 3.6v4.2h.1z" />
-									</svg>
-								</Link>
-							</li>
-							<div className="ml-5 text-lg text-slate-800">Contact me on LinkedIn</div>
-						</ul>
-
-					</div>
-
+		<div className="container mx-auto">
+			<div className="pt-20 sm:pt-30 pb-8 mt-20 border-t-2 border-primary-light dark:border-secondary-dark">
+				{/* Footer social links */}
+				<div className="font-general-regular flex flex-col justify-center items-center mb-12 sm:mb-28">
+					<p className="text-3xl sm:text-4xl text-primary-dark dark:text-primary-light mb-5">
+						Follow me
+					</p>
+					<ul className="flex gap-4 sm:gap-8">
+						{socialLinks.map((link) => (
+							<a
+								href={link.url}
+								target="__blank"
+								key={link.id}
+								className="text-gray-400 hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer rounded-lg bg-gray-50 dark:bg-ternary-dark hover:bg-gray-100 shadow-sm p-4 duration-300"
+							>
+								<i className="text-xl sm:text-2xl md:text-3xl">
+									{link.icon}
+								</i>
+							</a>
+						))}
+					</ul>
 				</div>
+
+				<AppFooterCopyright />
 			</div>
-		</footer>
-	)
+		</div>
+	);
 }
+
+export default AppFooter;
